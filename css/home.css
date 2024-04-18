@@ -1,0 +1,318 @@
+/* 구글 폰트 연결 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Rufina:wght@400;700&display=swap');
+
+.g{
+  background: green;
+}
+
+.p{
+  background: pink;
+}
+
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+#wrap{
+  padding-top: 150px;
+}
+
+/* 서브 페이지 - 큰 제목 */
+h1{
+  font-family: 'Rufina', serif;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: left;
+}
+
+h2{
+  font-family: 'Rufina', serif;
+}
+
+/* 서브 페이지 - 소 제목 */
+h5{
+  font-size: 14px;
+  font-weight: 300;
+  color: #ABABAB;
+  margin-bottom: 10px;
+}
+
+/* contact 제목 */
+h6{
+  font-size: 16px;
+  margin: 15px;
+  margin-top: 30px;
+}
+
+/* 고정 링크드인 & 메일 */
+#linkedin{
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: fixed; 
+  z-index: 100; 
+  top:15%; 
+  left: 90%; 
+  bottom:10px; 
+  text-align: center; 
+  color:#000;
+}
+
+  #linkedin img{
+    width: 100%;
+    margin: 5px;
+  }
+
+/* 고정 top */
+#wrap #topBtn{
+  font-size: 50px;
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top:90%; 
+  left: 90%;
+  bottom: 10px; 
+  text-align: center; 
+  color:#000;
+  cursor: pointer;
+  background: linear-gradient(to right, #DEA9F0, #F3B5B5, #F5BD84);
+  color: transparent;
+  /* 크롬 지원의 한계로, 앞에 -webkit- 써줌 */
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* 클릭시 생성되는 테두리 제거 */
+button:focus{
+  outline: 0px;
+}
+
+/* 헤더 */
+header{
+  font-family: 'Rufina', serif;
+  border-bottom: solid 1px #000;
+  padding: 5px 0px;
+}
+
+  /** 로고 **/
+  .navbar-brand{
+    width: 60px;
+    transition: all 1s;
+  }
+
+  .navbar-brand img{
+    width: 100%;
+  }
+
+    .navbar-brand:hover, .navbar-brand:focus{
+      animation: logo 3s linear;
+    }
+
+  /** 메뉴바 **/
+  .bg-light{
+    /* bootstrap에 있는 style을 조정할 땐 '!important'까지 가져와야 함 */
+    background-color: rgb(255, 255, 255) !important;
+  }
+
+  /** 메뉴 서식 **/
+  .navbar-light .navbar-nav .nav-link{
+    color: #000;
+    padding: 0px 25px;
+    transition: color 0.25s ease;
+    cursor: pointer;
+  }
+
+      /** 메뉴 호버/포커스 서식**/ 
+      #port_menu a, .navbar-light .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link:focus{
+        background: linear-gradient(to right, #DEA9F0, #F3B5B5, #F5BD84);
+        color: transparent;
+        /* 크롬 지원의 한계로, 앞에 -webkit- 써줌 */
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+
+    /* 헤더 위 선 및 라인 */
+    .textHeader{
+      font-family: 'Rufina', serif;
+      font-size: 40px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+      .lineHeader{
+        width: 55px;
+        border-bottom: #000 1px solid;
+      }
+
+    /** 라인 및 버튼 **/
+    .linePortfolio{
+      border: #fff 1px solid;
+
+      border-image: linear-gradient(to right, #DEA9F0, #F3B5B5, #F5BD84);
+      border-image-slice: 1;
+      background: transparent;
+    }
+
+    .buttonPortfolio{
+      text-align: center;
+      margin-top: 15px;
+      border: #fff 1px solid;
+      border-radius: 30px;
+      padding: 10px 20px;
+
+      font-size: 14px;
+      font-weight: 300;
+      
+      transition: all 0.7s;
+    }
+
+      .buttonPortfolio:hover,
+      .buttonPortfolio:focus{
+        background-color: #fafafa;
+        color: #d68f47
+      }
+
+    /* 푸터 */
+    footer{
+      padding: 40px;
+      font-weight: 100;
+    }
+
+    /* //////////////////////// 서브 페이지 ///////////////////////////////////////// */
+
+  /** more_projects **/
+    
+    /*** myCanvas ***/
+    #myCanvas{
+      padding: 60px 0px;
+    }
+
+    .more_projects .row{
+      margin: 0 auto;
+    }
+
+      .more_projects .row .col-md-6{
+        padding: 0px;
+      }
+
+    .more_projects img{
+      width: 100%;
+      height: 100%;
+      transition: all 1s;
+
+      margin-left: 0%;
+      margin-top: 0%;
+    }
+
+      .more_projects img:hover{
+        width: 120%;
+        height: 120%;
+        margin-left: -10%;
+        margin-top: -5%;
+
+        filter: brightness(20%);
+      }
+
+      #next-left .buttonPortfolio, 
+      #next-right .buttonPortfolio{
+      /* float는 block 오브젝트를 한 줄로 나열할 때 사용 (left,right) */
+        float: right;
+        margin: 20px 5px;
+        padding: 5px 20px;
+      }
+
+      #next-left h2{
+        text-align: right;
+      }
+
+        #next-left .buttonPortfolio::after,
+        #next-right .buttonPortfolio::after{
+          display: table;
+        }
+
+      #next-right .buttonPortfolio{
+      /* float는 block 오브젝트를 한 줄로 나열할 때 사용 (left,right) */
+        float: left;
+      }
+
+    /* learn */
+    .learn .row{
+      margin: 0 auto;
+      padding: 150px 0px;
+    }
+
+
+
+    /** 테블릿 **/
+    @media(max-width:991px){
+
+      /** 메뉴 서식 **/
+      .navbar-light .navbar-nav{
+        padding: 20px;
+      }
+      
+      .navbar-light .navbar-nav .nav-link{
+        padding: 10px;
+      }
+
+      /* 고정 top */
+      #wrap #topBtn{
+        top:75%; 
+        left: 88%;
+      }
+
+      /*** next-left, right ***/
+      #next-left>div, #next-right>div{
+        height: 300px;
+      }
+
+    }
+
+    /** 스마트폰 **/
+    @media(max-width:767px){
+
+      h2{
+        font-size: 28px;
+      }
+
+      h3{
+        font-size: 22px;
+      }
+
+      /* 로고 */
+      .navbar-brand img{
+        width: 50px;
+      }
+
+      #linkedin{
+        left: 85%;
+      }
+
+      /* 고정 top */
+      #wrap #topBtn{
+        top:80%; 
+        left: 75%;
+      }
+
+    }
+
+    /* 애니메이션 */
+    @keyframes logo{
+      0% {} /* 시작 */
+      50% {transform: rotateY(180deg);}
+      100% {} /* 끝 */
+    }
+
+    /* arrowDown 애니메이션 */
+    @keyframes chevronAnimation{
+      0%{
+        transform: rotate(495deg) translate(0,0) scale(1.0,1.0); /* arrowDown과 rotate값 동일하게 지정해야함 */
+      }
+      50%{
+        transform: rotate(495deg) translate(0,0) scale(0.7,0.7);
+      }
+      100%{
+        transform: rotate(495deg) translate(0,0) scale(1.0,1.0);
+      }
+    }

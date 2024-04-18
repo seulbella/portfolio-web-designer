@@ -1,0 +1,1079 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <!-- J-query -->
+    <link rel="stylesheet"  href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/
+    themes/smoothness/jquery-ui.css">
+   
+    <!-- 내 웹 아이콘 서버 저장소 : fontawesome.com -->
+    <script src="https://kit.fontawesome.com/be87ac57b9.js" crossorigin="anonymous"></script>
+
+    <!-- 파비콘 -->
+    <link rel="icon" href="img/logo/favicon.png" type="image/x-icon">
+    <title>Seul bi Lee | Home</title>
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+    
+    /* css */
+    @import url(css/home.css);
+
+    /* 본문 시작 */
+    /** 배너 **/
+    .banner{
+      position: relative;
+      height: 700px;
+
+      font-family: 'Rufina', serif;
+      font-size: 40px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    #hiThere{
+      padding-top: 45px;  
+    }
+
+      div#hiThere span{
+      cursor: pointer;
+      background: linear-gradient(to right,#DEA9F0 40%, #F5BD84 60%, #F3B5B5 80%, #DEA9F0 100%);
+      background-size: 200% auto;
+      
+      color: #000;
+      background-clip: text;
+      /* text-fill-color: transparent; */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    
+      animation: shine 3s linear infinite;
+      }
+
+    /*** 수직선 ***/
+    #myCanvas{
+      display: block; /* canvas를 가운데 정렬하려면 꼭 해줘야 함 */
+      margin: 0 auto;
+      padding-top: 20px;
+      }
+
+    /*** 갈매기(아래방향) ***/
+
+    .banner .arrow_box{
+      position: absolute;
+      content: '';
+      cursor: pointer;
+
+      z-index: 10;
+      bottom: 15%;
+      left: 45%;
+      width:10%; 
+
+    }
+
+    .banner .arrow_box .arrowDown{
+      
+      margin: 0 auto;
+      transform: translate(-50%, -50%), rotate(495deg); /* 위치 및 각도 */
+
+      width: 35px; /* 사이즈 */ 
+      height: 35px;
+
+      border-top: 6px solid transparent; /* 선 두께 */ 
+      border-right: 6px solid transparent; 
+
+      border-image: linear-gradient(to right, #DEA9F0, #F3B5B5, #F5BD84);
+      border-image-slice: 1;
+      background: transparent;
+
+      animation: chevronAnimation 4s ease-in-out 0s infinite;
+    }
+
+    /** myProject **/
+    .myProject{
+      padding-top: 120px;
+    }
+
+      .myProject img{
+        width: auto;
+        height: 100%;
+        transition: all 1s;
+
+        margin-left: 0%;
+        margin-top: 0%;
+      }
+
+        .myProject img:hover{
+          width: 110%;
+          height: 110%;
+          margin-left: -10%;
+          margin-top: -5%;
+
+          filter: brightness(20%);
+        }
+
+      /*** banksalad ***/
+      #banksaladMyproject>div{
+        margin-bottom: 30px;
+        height: 360px;
+        position: relative;
+        overflow: hidden;
+        background-image: url(img/myproject/banksalad.png);
+        background-size: cover;
+        background-position: center;
+      }
+
+        #banksaladMyproject .textBanksalad{
+          position: absolute;
+          z-index: 10;
+          bottom: 30px;
+          right: 30px;
+          color: #fff;
+          text-align: right;
+        }
+
+      /*** lemonade ***/
+      #lemonadeMyproject>div{
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+        background-image: url(img/myproject/lemonade.png);
+        background-size: cover;
+        background-position: center;
+        
+      }
+
+        #lemonadeMyproject .textLemonade{
+          position: absolute;
+          z-index: 10;
+          bottom: 30px;
+          left: 30px;
+          color: #fff;
+          text-align: left;
+        }
+
+        #lemonadeMyproject .buttonPortfolio{
+        /* float는 block 오브젝트를 한 줄로 나열할 때 사용 (left,right) */
+          float: left;
+        }
+
+          #lemonadeMyproject .buttonPortfolio::after{
+            display: table;
+          }
+
+      /*** devil-vegans ***/
+      #devilvegansMyproject>div{
+        padding: 0px;
+        height: 600px;
+        position: relative;
+        overflow: hidden;
+        background-image: url(img/myproject/devilvegans.png);
+        background-size: cover;
+        background-position: center;
+
+        
+      }
+
+        #devilvegansMyproject .textDevilvegans{
+          position: absolute;
+          z-index: 10;
+          top: 30px;
+          right:30px;
+          color: #fff;
+          text-align: right;
+        }
+
+          #devilvegansMyproject .buttonPortfolio{
+            /* float는 block 오브젝트를 한 줄로 나열할 때 사용 (left,right) */
+            float: right;
+          }
+
+          #devilvegansMyproject .buttonPortfolio::after{
+            display: table; /* 또는 display : block 써도 됨 */
+            }
+
+    /** Pro-Motion **/
+    .proMotion{
+      padding-top: 160px;
+    }
+
+      .proMotion .col-md-5{
+        width: 370px;
+        height: 350px;
+
+        margin: 0 auto;
+      }
+
+      .proMotion .boxPromotion{
+        height:100%; 
+        width: 100%;
+            
+        transition: all 1s;
+      }
+
+        /*** corco ***/
+        .corcoPromotion{
+          position: relative;
+        }
+
+          .proMotion .col-md-5 .corcoBox{
+            background: linear-gradient(to right, #FFC58C, #AE85ED);
+          }
+
+          .corcoPromotion:hover .corcoBox{
+            filter: brightness(50%);
+            cursor: pointer; 
+          }  
+
+          .corcoPromotion .textCorco{
+            position: absolute;
+            z-index: 10;
+            top: 25%;
+            left: 18%;
+            color: #fff;
+            text-align: left;
+            cursor: pointer;
+          }
+
+        /*** nordgreen ***/
+        .nordgreenPromotion{
+          position: relative;
+        }
+
+          .proMotion .col-md-5 .nordgreenBox{
+            background: linear-gradient(to right, #e7db7f, #7CD9D9);
+          }
+
+          .nordgreenPromotion:hover .nordgreenBox{
+            filter: brightness(50%);
+            cursor: pointer; 
+          }  
+
+          .nordgreenPromotion .textNordgreen{
+            position: absolute;
+            z-index: 10;
+            top: 25%;
+            left: 18%;
+            color: #fff;
+            text-align: left;
+            cursor: pointer;
+          }
+
+    /* modal */
+    .modal-line{
+      width: 120px;
+      border-bottom: rgb(36, 36, 36) 1px solid;
+      margin: 0 auto;
+    }
+
+      #corcoModal p, #nordgreenModal p{
+        padding: 80px 140px;
+        line-height: 30px;
+      }
+
+    .corco-logo, .nordgreen-logo{
+      padding: 60px 0px;
+      padding-bottom: 80px;
+    }
+
+    .nordgreen-logo img{
+      width: 200px;
+      text-align: center;
+    }
+
+    /** About Me **/
+    .aboutMe{
+      padding-top: 120px;
+    }
+
+      .aboutmeText{
+        font-size: 16px;
+        font-weight: 400;
+        text-align: justify;
+      }
+
+      .imgProfile{
+        width: 25%;
+        padding: 60px 0px;
+        margin: 0 auto;
+      }
+
+      .mygoalText{
+        font-family: 'Rufina', serif;
+        display: flex; /* 정렬 프로퍼티 */
+        justify-content: center; /* 가로 가운데 정렬 */
+        align-items: center; /* 세로 가운데 정렬 */
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+        /*** aboutme span ***/ 
+        .mygoalText span{
+          background: linear-gradient(to right, #DEA9F0, #F3B5B5, #F5BD84);
+          color: transparent;
+          /* 크롬 지원의 한계로, 앞에 -webkit- 써줌 */
+          background-clip: text;
+          -webkit-background-clip: text;
+        }
+
+      /** contact **/
+      .contact{
+        padding: 120px 0px;
+      }
+
+        .contact .row{
+          margin: 0 auto;
+          margin-top: 100px;
+          width: 80%;
+        }
+
+        #icons #map, #mail, #resume{
+          font-size: 55px;
+          background: linear-gradient(to right, #DEA9F0, #F3B5B5, #F5BD84);
+          color: transparent;
+          /* 크롬 지원의 한계로, 앞에 -webkit- 써줌 */
+          background-clip: text;
+          -webkit-background-clip: text;
+        } 
+
+    /* 반응형 */
+    /** 노트북 **/
+    @media(max-width:1199px){
+
+      /** 배너 **/
+      .banner{
+        height: 600px;
+      }
+
+      /** myProject **/
+      /*** banksalad ***/
+      #banksaladMyproject>div{
+        height: 320px;
+      }
+
+      /*** lemonade ***/
+      #lemonadeMyproject>div{
+        height: 300px;
+      }
+
+      /*** lemonade 앱솔루트 ***/
+     /*  .textLemonade{
+        top: 55%;
+        left: 5%;
+      }
+ */
+      /*** devil-vegans ***/
+      #devilvegansMyproject>div{
+        height: 440px;
+      }
+
+    }
+
+    /** 태블릿 **/
+    @media(max-width:991px){
+
+      h2{
+        font-size: 28px;
+      }
+
+      .buttonPortfolio{
+        padding: 10px 15px;
+        font-size: 12px;
+      }
+
+      /* 헤더 위 선 및 라인 */
+      .textHeader{
+        font-size: 32px;
+      }
+
+        .lineHeader{
+          width: 50px;
+        }
+
+      /* banner */
+      .banner{
+        height: 600px;
+      }
+
+      /* 갈매기 */
+   /*    .banner .arrowDown{
+        top: 80%;
+        left: 47.3%;
+      }
+ */
+      /** myProject **/
+      .myProject img:hover{
+        width: 100%;
+        height: 100%;
+
+        margin-left: 0%;
+        margin-top: 0%;
+
+        filter: brightness(100%);
+      }
+
+      /*** banksalad ***/
+      #banksaladMyproject>div{
+        height: 210px;
+      }
+
+        /*** banksalad 앱솔루트 ***/
+     /*    #banksaladMyproject .textBanksalad{
+          top: 45%;
+          right: 5%;
+        }
+ */
+      /*** lemonade ***/
+      #lemonadeMyproject>div{
+        height: 218px;
+      }
+
+      /*** lemonade 앱솔루트 ***/
+     /*  #lemonadeMyproject .textLemonade{
+        top: 45%;
+        left: 5%;
+      }
+ */
+      /*** devil-vegans ***/
+      #devilvegansMyproject>div{
+        height: 310px;
+      }
+
+      /*** devil-vegans 앱솔루트 ***/
+    /*   #devilvegansMyproject .textDevilvegans{
+        top: 8%;
+        right: 5%;
+      } */
+
+      /** proMotion **/
+      .proMotion .col-md-5{
+          height: 280px;
+        }
+
+      /* modal */
+      .modal-line{
+          width: 120px;
+          border-bottom: rgb(36, 36, 36) 1px solid;
+          margin: 0 auto;
+        }
+
+          #corcoModal p, #nordgreenModal p{
+            padding: 80px 50px;
+            line-height: 30px;
+          }
+        
+      /* about me */
+      .mygoalText{
+        display: flex; /* 정렬 프로퍼티 */
+        justify-content: center; /* 가로 가운데 정렬 */
+        align-items: center; /* 세로 가운데 정렬 */
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .aboutmeText{
+        font-size: 18px;
+        font-weight: 400;
+      }
+
+      /* contact */
+      /* pc상태에서 너비를 줄이기 위해 강제적으로 .row 80%준 것을 다시 원상복귀 시켜야 함. => 미처리시 레이아웃 틀어짐 */
+      .contact .row{
+        margin: 0px;
+        margin-top: 100px;
+        /* width:100%만 입력하거나 margin: auto -15px 를 추가시는 width:auto 로 지정해야 함 */
+        width: 100%;
+      }
+
+  } 
+
+    /** 스마트폰 **/
+    @media(max-width:767px){
+      
+      .contact .col-md-4{
+        margin-top: 50px;
+      }
+
+      /* 헤더 위 선 및 라인 */
+      .textHeader{
+        font-size: 28px;
+        padding-bottom: 30px;
+      }
+
+        .lineHeader{
+          width: 40px;
+        }
+
+      /** 배너 **/
+      .banner{
+        height: 400px;
+      }
+
+      /* 배너 문구 */
+      #hiThere{
+        font-size: 22px;
+        padding: 40px 0px;
+      }
+
+      .banner .arrow_box{
+      bottom: 3%;
+      }
+
+      h2{
+        font-size: 22px;
+      }
+
+      .buttonPortfolio{
+        padding: 12px;
+        font-size: 10px 15px;
+      }
+
+      /** myProject **/
+      /*** banksalad ***/
+      #banksaladMyproject>div{
+        height: 200px;
+      }
+
+        /*** banksalad 앱솔루트 ***/
+     /*    #banksaladMyproject .textBanksalad{
+          top: 45%;
+          right: 5%;
+        } */
+
+      /*** lemonade ***/
+      #lemonadeMyproject>div{
+        height: 250px;
+        margin-bottom: 30px;
+      }
+
+      /*** lemonade 앱솔루트 ***/
+    /*   #lemonadeMyproject .textLemonade{
+        top: 55%;
+        left: 5%;
+      } */
+
+      /** proMotion **/
+      .proMotion .col-md-5>div{
+        height: 240px;
+        margin: 0px;
+        margin-bottom: 30px;
+      }
+
+      /* modal */
+      .modal-line{
+          width: 120px;
+          border-bottom: rgb(36, 36, 36) 1px solid;
+          margin: 0 auto;
+        }
+
+          #corcoModal p, #nordgreenModal p{
+            padding: 50px 15px;
+            line-height: 30px;
+          }
+
+        .corco-logo, .nordgreen-logo{
+          padding: 60px 0px;
+          padding-bottom: 80px;
+        }
+
+        .corco-logo img{
+          width: 120px;
+          text-align: center;
+        }
+
+        .nordgreen-logo img{
+          width: 180px;
+          text-align: center;
+        }
+
+      /* About Me */
+      .aboutMe{
+        padding-top: 120px;
+      }
+
+      /* contact */
+      .contact .row{
+          margin-top: 0px;
+          margin-bottom: 30px;
+        }
+
+      .imgProfile{
+        width: 45%;
+        padding: 40px 0px;
+        margin: 0 auto;
+      }
+
+    }
+
+    @keyframes shine{
+      to{
+        background-position: 200% center;
+      }
+    }
+
+    /* arrowDown 애니메이션 */
+    @keyframes chevronAnimation{
+	    0%{
+		    transform: rotate(495deg) translate(0,0) scale(1.0,1.0); /* arrowDown과 rotate값 동일하게 지정해야함 */
+	    }
+	    50%{
+		    transform: rotate(495deg) translate(0,0) scale(0.7,0.7);
+	    }
+	    100%{
+		    transform: rotate(495deg) translate(0,0) scale(1.0,1.0);
+	    }
+    }
+
+    </style>
+  </head>
+  <body>
+
+    <!-- 본문 시작 -->
+    <div class="container" id="wrap">
+
+      <!-- 헤더 -->
+      <header class="fixed-top bg-light">
+        <div class="container">
+          <nav class="navbar navbar-light navbar-expand-lg">
+
+            <!-- 로고 -->
+            <a class="navbar-brand" href="#">
+              <img src="img/logo/favicon.png" alt="logo">
+            </a>
+
+            <!-- 버튼 -->
+            <button class="navbar-toggler" type="button"
+            data-toggle="collapse" data-target="#menu_index" aria-expanded="true">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 메뉴 -->
+            <div class="collapse navbar-collapse 
+                        justify-content-end" id="menu_index">
+              <ul class="navbar-nav text-center">
+
+                <li class="nav-item" id="port_menu">
+                  <a class="nav-link" data-button="1">
+                    PORTFOLIO
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" data-button="2">
+                    ABOUT
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" data-button="3">
+                    CONTACT
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+
+          </nav>
+        </div>
+      </header>
+
+      <!-- 링크드인 & 메일 -->
+      <div id="linkedin">
+        <a href="http://linkedin.com/in/bella-lee-1a44671a2" target="_blank">
+          <img src="img/myproject/linkedin.png" alt="linkedin">
+        </a>
+        <a href="mailto:bellalee9513@gmail.com" target="_blank">
+          <img src="img/myproject/email.png" alt="email">
+        </a>
+      </div>
+
+      <!-- 배너 -->
+      <div class="banner">
+          <div id="hiThere">
+              HI THERE. I’M SEUL BI LEE<br>
+              I AM A <span data-button="2" data-aos="fade-right" data-aos-duration="1000">
+              WEB DESIGNER</span><br>
+              BORN IN KOREA.
+          </div>
+
+        <div>
+          <canvas id="myCanvas" width="50" height="150"></canvas>
+        </div>
+
+        <div class="arrow_box"><div class="arrowDown" data-button="1"></div>
+       </div>
+        
+      </div>
+
+      <!-- myProject -->
+      <div class="myProject" data-section="1">
+        <div class="row".>
+
+          <!-- 헤드라인 -->
+          <div class="col-md-2 textHeader">
+            <div class="lineHeader"></div>
+            My<br>Project
+          </div>
+
+          <!-- banksalad -->
+          <div class="col-md-10" id="banksaladMyproject"
+          data-aos="fade-left" data-aos-duration="1100">
+            <div>
+              <a href="banksalad.html" target="_blank">
+               <!--  <img src="img/myproject/banksalad.png" alt="banksalad"> 배경으로 전환 -->
+
+                  <!-- 앱솔루트  -->
+                  <div class="textBanksalad">
+                    <h2>Bank Salad</h2>
+                    <div class="linePortfolio"> </div>
+                    <div class="buttonPortfolio">
+                      Responsive Web / Redesign
+                    </div>
+                  </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <!-- lemonade -->
+          <div class="col-md-5" id="lemonadeMyproject"
+          data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+
+            <div>
+              <a href="lemonade.html" target="_blank">
+                <!-- <img src="img/myproject/lemonade.png" alt="lemonade"> 배경으로 전환 -->
+
+                <!-- 앱솔루트 -->
+                <div class="textLemonade">
+                  <h2>Lemonade</h2>
+                  <div class="linePortfolio"></div>
+                  <div class="buttonPortfolio">
+                    App Design
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- devil-vegans -->
+          <div class="col-md-7" id="devilvegansMyproject"
+          data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+            <div>
+            <a href="devil-vegans.html" target="_blank">
+              <!-- <img src="img/myproject/devilvegans.png" alt="devilvegans"> 배경으로 전환 -->
+
+              <!-- 앱솔루트 -->
+              <div class="textDevilvegans">
+                <h2>Devil Vegans</h2>
+                <div class="linePortfolio"></div>
+                <div class="buttonPortfolio">
+                  Logo Design
+                </div>
+              </div>
+            </a>
+          </div>
+          </div>
+
+        </div>
+
+      </div> <!-- myProject 끝 -->
+
+      <!-- Promotion -->
+      <div class="proMotion">
+        <div class="row">
+
+          <!-- 헤드라인 -->
+          <div class="col-md-2 textHeader">
+            <div class="lineHeader"></div>
+            Pro-<br>Motion
+          </div>
+
+          <!-- CORCO -->
+          <div class="col-md-5 corcoPromotion"
+          data-aos="fade-left" data-aos-duration="1000">
+               
+            <div class="boxPromotion corcoBox" data-target="#corcoModal" data-toggle="modal">
+            </div>
+              <!-- 앱솔루트 -->
+              <div class="textCorco" data-target="#corcoModal" data-toggle="modal">
+                <h2>Corco</h2>
+                <div class="linePortfolio"></div>
+                <div class="buttonPortfolio">
+                  Product Informaiton Page
+                </div>
+              </div>
+      
+          </div>
+
+          <!-- CORCO Modal 화면 구성-->
+          <div class="modal fade" id="corcoModal">
+            <div class="modal-dialog modal-dialog-scrollable modal-xl">
+              <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+
+                  <!-- x-버튼 -->
+                  <button type="button" class="close" data-dismiss="modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                      <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                    </svg>
+                  </button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body text-center">
+
+                  <!-- corco logo -->
+                  <div class="corco-logo">
+                    <img src="img/promotion/corco-logo.png" alt="corco-logo"
+                    class="img-fluid mx-auto d-block">
+                  </div>
+
+                  <div class="modal-line"></div>
+
+                  <p>CORCO는 코르크나무 껍질을 이용해 친환경적인 소재의 가죽 제품을
+                    만드는 비건 브랜드입니다.<br><br> 브랜드의 특징을 잘 나타낼 수 있도록 깊은 숲속의
+                    자연을 모티브로 제작했으며, 잠재 고객층인 동물을 사랑하고 에코 라이프에 적극적인
+                    소비자들의 호응을 끌어내기 위해 수익금의 일부를 동물 보호 단체에 후원하는 점도
+                    놓치지 않았습니다.<br><br> 소비자의 올바른 구매 결정을 유도하기 위해 제품의 상세 사이즈와 컬러,
+                    디테일 컷, 구매자의 리뷰 등을 포함했습니다.
+                  </p>
+                  <img src="img/promotion/corco.jpg" alt="corco"
+                  class="img-fluid mx-auto d-block">
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+          <!-- Nord Green -->
+          <div class="col-md-5 nordgreenPromotion"
+          data-aos="fade-left" data-aos-duration="1100"
+          data-aos-delay="300">
+               
+            <div class="boxPromotion nordgreenBox" data-target="#nordgreenModal" data-toggle="modal">
+            </div>
+              <!-- 앱솔루트 -->
+              <div class="textNordgreen" data-target="#nordgreenModal" data-toggle="modal">
+                <h2>Nord Green</h2>
+                <div class="linePortfolio"></div>
+                <div class="buttonPortfolio">
+                  Pop-Up Event Page
+                </div>
+              </div>
+      
+          </div>
+
+          <!-- Nord Green Modal 화면 구성-->
+          <div class="modal fade" id="nordgreenModal">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  
+                  <!-- x-버튼 -->
+                  <button type="button" class="close" data-dismiss="modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                      <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                    </svg>
+                  </button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body text-center">
+
+                  <!-- corco logo -->
+                  <div class="nordgreen-logo">
+                    <img src="img/promotion/nordgreen-logo.png" alt="nordgreen-logo"
+                    class="mx-auto d-block">
+                  </div>
+
+                  <div class="modal-line"></div>
+
+                  <p>Nord Green은 덴마크의 라이프스타일을 담고 있는 미니멀한 컨셉의 손목시계 브랜드입니다.<br><br>
+                     크리스마스 시즌에 걸맞은 따뜻함과 브랜드 특유의 고급스러움을 함께 표현하고자 하였습니다.<br><br>
+                     해당 팝업창은 홀리데이 기프트 세트 컬렉션으로 연인이나 배우자에게 시계를 선물할 의향이
+                     있는 소비자를 대상으로 만들었습니다.
+                  </p>
+                  <img src="img/promotion/nordgreen.jpg" alt="nordgreen"
+                  class="img-fluid mx-auto d-block">
+                </div>
+                
+              </div>
+            </div>
+          </div>
+              
+        </div> <!-- row 끝 -->
+      </div> <!-- proMotion 끝 -->
+
+      <!-- About me -->
+      <div class="aboutMe" data-section="2">
+
+        <!-- 헤드라인 -->
+        <div class="textHeader">
+          <div class="lineHeader"></div>
+          About Me
+        </div>
+
+        <!-- 프로필 사진 -->
+        <div class="imgProfile">
+          <img src="img/myproject/profile-2.png" alt="profile" class="img-fluid">
+        </div>
+
+        <!-- 소개문구 -->
+        <div class="row">
+          
+          <!-- goal -->
+          <div class="col-md-6 mygoalText">
+            <div class="col-md-12"
+            data-aos="fade-right" data-aos-duration="1000"> 
+              <span>“<br>My goal</span> is to provide<br>
+                convenient digital<br>
+                services that functions<br>
+                well <span>for all users.<br>”</span>
+            </div>
+          </div>
+
+          <div class="col-md-6 aboutmeText"
+          data-aos="fade-left" data-aos-duration="1100"
+          data-aos-delay="300">
+            After graduating from university, 
+            the long and short time of self-reflection led me to a new path as a web designer.
+            <br><br>
+            The Web Designer Short-Term Acceleration Course I took was a course that allowed me 
+            to develop my skills in the first year or more of my career.
+            <br><br>
+            I'm good at HTML and CSS, and I can add active elements to the 
+            web for users using open-source JavaScript and jQuery. 
+            <br><br>
+            I can also use Photoshop and Illustrator.
+            <br><br>
+            If you want to build a convenient and beautiful website/app with me, 
+            please get in touch with me!
+          </div>
+        </div> <!-- 소개문구 끝 -->
+
+      </div> <!-- about me 끝 -->
+
+      <!-- Contact -->
+      <div class="contact" data-section="3">
+
+        <!-- 헤드라인 -->
+        <div class="textHeader">
+          <div class="lineHeader"></div>
+          Contact
+        </div>
+
+        <!-- contact icons -->
+        <div class="row justify-content-center text-center" id="icons">
+              <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
+                <i class="fas fa-map-marker-alt" id="map"></i>
+                <h6>Address</h6>
+                Uijeongbu-si, Korea
+              </div>
+              <div class="col-md-4" data-aos="fade-up" data-aos-duration="1100"
+              data-aos-delay="200">
+                <i class="fas fa-envelope-open-text" id="mail"></i>
+                <h6>Email Me</h6>
+                bellalee9513@gmail.com
+              </div>
+              <div class="col-md-4" data-aos="fade-up" data-aos-duration="1100"
+              data-aos-delay="300">
+                <i class="fas fa-id-badge" id="resume"></i>
+                <h6>Resume</h6>
+                <a href="http://bellalee9513.dothome.co.kr/data/resume.pdf" target="_blank">Resume</a>
+              </div>           
+        </div>
+
+
+    </div> <!-- 본문 끝 -->
+
+    <!-- Footer -->
+    <footer class="text-center">
+      © 2022 Seul Bi Lee Web Design Projects
+    </footer>
+
+    <!-- Canvas - Javascript -->
+    <script> 
+
+      // 1. canvas 엘리먼트를 취득한다. 
+      const canvas = document.getElementById('myCanvas'); 
+      // 2. 2d모드의 그리기 객체를 취득한다. => 이 객체를 통해 canvas에 그림을 그릴 수 있다. 
+      const ctx = canvas.getContext("2d");
+      ctx.fill();
+      // 3. 새선 그리기 설정 
+      ctx.beginPath(); 
+      // 4. 출발점 지정 
+      ctx.moveTo(25, 0); 
+      // 5. 도착점 지정 
+      ctx.lineTo(25, 120);
+      // 6. 선 두께 및 색상
+      ctx.lineWidth = 1; 
+      ctx.strokeStyle = "#00000";
+      // 7. 선 그리기 
+      ctx.stroke();
+
+      // 원 그리기 시작
+      ctx.beginPath();
+      // 원 (x시작좌표값, y시작좌표값, 반지름크기, 원모양, 시계방향여부)
+      ctx.arc(25, 120, 6, Math.PI*2, false);
+      ctx.fillstyle = "#00000";
+      ctx.fill();
+      ctx.closePath();
+
+    </script>
+
+    <!-- 스크립트 구역 -->
+    <!-- 아래 정렬순서가 왜 이렇게 되는지 공부할 것 -->
+    <!-- 이 속에 제이쿼리 엔진 다 들어 있어서 이 스크립트만 있어도 됨 -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+
+        disable: 'mobile'
+        
+      });
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   
+    <!-- 순서 지키는 게 중요 (구동시키는 제이쿼리 파일이 먼저 와야함)********** -->
+    <!-- 최근 scrolling을 선호하지 않아 제이쿼리 상위버전에서는 지원을 없앴기 때문에 따로 개별적으로 하위 버전을
+    깔아주고 그 밑에 scrolling파일을 불러와야 함 -->
+    <script src="js/jquery-2.0.2.min.js"></script>     
+    <script src="js/scrolling-bt.js"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+
+    <!-- 모바일에서 메뉴클릭시 메뉴화면 닫히는 스크립트 -->
+    <script>
+      $('.nav-link, logo').click(function(){
+     
+        $('.navbar-collapse').collapse('hide');
+        
+     
+      });
+     </script>   
+     
+
+  </body>
+</html>

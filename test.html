@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <!-- J-query -->
+    <link rel="stylesheet"  href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/
+    themes/smoothness/jquery-ui.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <title>Hello, world!</title>
+    <style>
+      /* 구글 폰트 연결 */
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Rufina:wght@400;700&display=swap');
+
+      /** 배너 **/
+      .banner{
+        background: #fff;
+        height: 700px;
+      }
+
+      /*** 배너문구 ***/
+      #hiThere{
+
+        position: absolute;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 40%;
+        max-wisth: 100%;
+
+        font-family: 'Rufina', serif;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+
+      }
+
+      .title {
+        color:#333;
+        color: transparent;
+        font-size: 40px;
+        background: url("https://acegif.com/wp-content/gif/outerspace-46.gif") repeat;
+        background-position: 30% 10%;
+        background-size: 200%;
+        -webkit-background-clip: text;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container" id="wrap">
+      <div class="banner">
+        <div id="hiThere">
+            HI THERE. I’M SEUL BI LEE<br>
+            I AM AN <span class="title" contenteditable>WEB DESIGNER</span><br>
+            BORN IN KOREA.
+        </div>
+    </div>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+
+    <script>
+    $(document).ready(function(){
+      var mouseX, mouseY;
+      var ww = $( window ).width();
+      var wh = $( window ).height();
+      var traX, traY;
+      $(document).mousemove(function(e){
+         mouseX = e.pageX;
+         mouseY = e.pageY;
+        traX = ((4 * mouseX) / 350) + 10;
+        traY = ((4 * mouseY) / 350) + 20;
+        $(".title ").css({"background-position": traX + "%" + traY + "%"});
+        $(".title span").css({"background-position": traY + "%" + traX + "%"});
+    
+      });
+    });
+    </script>
+    
+  </body>
+</html>

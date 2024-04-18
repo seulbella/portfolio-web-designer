@@ -1,0 +1,25 @@
+
+
+
+/* 움직이는 그라데이션 효과 (css) */
+div#hiThere span{
+  cursor: pointer;
+
+  background: linear-gradient(to right, #b399fb 20%, #ffa0b0 40%, #c1acfb 60%, #ffa0b0 80%, #b399fb 100%);
+  background-size: 200% auto;
+    
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    
+  animation: shine 3s linear infinite;
+  }
+
+  /* 이건 추가해야 될 애니메이션 */
+  @keyframes shine{
+    to{
+      background-position: 200% center;
+      }
+  }

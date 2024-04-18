@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <!-- J-query -->
+    <link rel="stylesheet"  href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/
+    themes/smoothness/jquery-ui.css">
+
+    <script src="prefixfree.min.js"> </script>
+    
+    <!-- 내 웹 아이콘 서버 저장소 : fontawesome.com -->
+    <script src="https://kit.fontawesome.com/be87ac57b9.js" crossorigin="anonymous"></script>
+
+    <!-- 파비콘 -->
+    <link rel="icon" href="img/logo/favicon.png" type="image/x-icon">
+    <title>Seul bi Lee | Devil Vegans</title>
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+      @import url(css/home.css);
+
+      #wrap{
+        padding-top: 90px;
+        font-size: 16px;
+        line-height: 30px;
+      }
+
+      /** 메뉴 호버/포커스 서식**/ 
+      #port_menu a, .navbar-light .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link:focus{
+        background: linear-gradient(to right, #687A74, #CCC495);
+        color: transparent;
+        /* 크롬 지원의 한계로, 앞에 -webkit- 써줌 */
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+
+      /* 고정 top */
+      #wrap #topBtn{
+        font-size: 50px;
+        display: none;
+        position: fixed;
+        z-index: 100;
+        top:90%; 
+        left: 90%;
+        bottom: 10px; 
+        text-align: center; 
+        color:#000;
+        cursor: pointer;
+        background: linear-gradient(to right, #687A74, #CCC495);
+        color: transparent;
+        /* 크롬 지원의 한계로, 앞에 -webkit- 써줌 */
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+
+    /* banner */
+    .banner img{
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+
+      /* overview */
+      .overview{
+        text-align: center;
+        padding: 0px;
+      }
+
+        .overview h1{
+          text-align: center;
+        }
+
+        .line-overview{
+          margin: 60px auto;
+          margin-bottom: 20px;
+          
+          width: 120px;
+          border: #fff 2px solid;
+
+          border-image: linear-gradient(to right, #687A74, #CCC495);
+          border-image-slice: 1;
+          background: transparent;
+        }
+
+        .list-overview{
+          padding: 40px 0px; 
+          padding-bottom: 120px; 
+          font-weight: 300;
+        }
+
+      /* 사진 1 */
+      .devil-vegans-1 img{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+      }
+
+      /* section-1 */
+      .section-1{
+        padding: 80px 0px;
+      }
+
+        .section-1 h5{
+          font-size: 18px;
+          font-weight: 600;
+          color: rgb(24, 24, 24);
+          padding-bottom: 50px;
+        }
+
+        .section-1 p{
+          font-size: 18px;
+          font-weight: 400;
+        }
+
+        .section-1 .col-md-12{
+          padding-bottom: 80px;
+        }
+
+          .logo-keyword .col-md-4{
+            padding: 0px 60px;
+          }
+
+        .logo-keyword img{
+          margin: 0 auto;
+          margin-bottom: 40px;
+        }
+
+        .logo-keyword p{
+          margin-top: 25px;
+          font-size: 16px;
+        }
+
+        .font-devil-vegans .col-md-4 img{
+          margin: 0 auto;
+          width: 90%;
+          padding: 0px 20px;
+        }
+
+        .mock-up-board img{
+          margin: 0 auto;
+          width: 100%;
+        }
+
+          .mock-up-board .col-md-12{
+            padding: 0px;
+          }
+
+          .mock-up-board .col-md-6{
+            padding: 0px;
+          }
+
+    /*** next left & right ***/
+    #next-left>div{
+      height: 400px;
+      position: relative;
+      overflow: hidden;
+      background-image: url(img/lemonade/next-banksalad.png);
+      background-size: cover;
+      background-position: center;
+    }
+
+    #next-right>div{
+      height: 400px;
+      position: relative;
+      overflow: hidden;
+      background-image: url(img/banksalad/next-lemonade.png);
+      background-size: cover;
+      background-position: center;
+    }
+
+      /*** left 앱솔루트 ***/
+      #next-left>div .text_next-left{
+        position: absolute;
+        z-index: 10;
+        bottom: 30px;
+        right: 30px;
+        color: #fff;
+        text-align: left;
+        float: right;
+      }
+
+      /*** right 앱솔루트 ***/
+      #next-right>div .text_next-right{
+        position: absolute;
+        z-index: 10;
+        bottom: 30px;
+        left: 30px;
+        color: #fff;
+      }
+        
+
+
+
+    /* 반응형 */
+    /** 노트북 **/
+    @media(max-width:1199px){
+    }
+
+    /** 태블릿 **/
+    @media(max-width:991px){
+
+      /* 고정 top */
+      #wrap #topBtn{
+        top:80%; 
+        left: 88%;
+      }
+
+      .overview h1{
+        font-weight: 35px;
+      }
+
+      .logo-mark img{
+        width: 120px;
+      }
+
+      .color img{
+        width: 150px;
+      }
+
+     /*** next-left, right ***/
+     #next-left>div, #next-right>div{
+        height: 300px;
+      }
+
+    }
+
+    /** 스마트폰 **/
+    @media(max-width:767px){
+
+      /* 고정 top */
+      #wrap #topBtn{
+        top:88%; 
+        left: 80%;
+      }
+
+      .overview h1{
+        font-size: 28px;
+      }
+
+      .list-overview{
+        padding: 40px 0px; 
+        padding-bottom: 80px; 
+      }
+
+      .section-1 h5{
+        font-size: 18px;
+        font-weight: 600;
+        color: rgb(24, 24, 24);
+        padding-bottom: 25px;
+      }
+
+      .logo-keyword .col-md-4{
+        padding-bottom: 40px;
+      }
+
+      .font-devil-vegans .col-md-4{
+        padding: 30px 0px;
+      }
+
+    /* footer */
+    /*** next-left & right ***/
+    #next-right>div, #next-left>div{
+      height: 200px;
+    }
+
+    }
+
+    </style>
+
+  </head>
+  <body>
+    <!-- 본문 시작 -->
+    <div class="container-fluid" id="wrap" data-section="1">
+
+      <!-- 헤더 -->
+      <header class="fixed-top bg-light">
+        <div class="container">
+          <nav class="navbar navbar-light navbar-expand-lg">
+
+            <!-- 로고 -->
+            <a class="navbar-brand" href="index.html">
+              <img src="img/logo/favicon.png" alt="logo">
+            </a>
+
+            <!-- 버튼 -->
+            <button class="navbar-toggler" type="button"
+            data-toggle="collapse" data-target="#menu_index" aria-expanded="true">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 메뉴 -->
+            <div class="collapse navbar-collapse 
+                        justify-content-end" id="menu_index">
+              <ul class="navbar-nav text-center">
+
+                <li class="nav-item">
+                  <a class="nav-link" href="banksalad.html" target="_top">
+                    BANK SALAD
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="lemonade.html" target="_top">
+                    LEMONADE
+                  </a>
+                </li>
+
+                <li class="nav-item" id="port_menu">
+                  <a class="nav-link" data-button="1">
+                    DEVIL VEGANS
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+
+          </nav>
+        </div>
+      </header>
+
+      <!-- 링크드인 & 메일 -->
+      <div id="linkedin">
+        <a href="http://linkedin.com/in/bella-lee-1a44671a2" target="_blank">
+          <img src="img/myproject/linkedin.png" alt="linkedin">
+        </a>
+        <a href="mailto:bellalee9513@gmail.com" target="_blank">
+          <img src="img/myproject/email.png" alt="email">
+        </a>
+      </div>
+
+      <!-- Top 버튼 -->
+      <div id="topBtn">
+        <i class="fas fa-chevron-up"></i>
+      </div>
+
+      <!-- 배너 -->
+      <div class="container">
+        <div class="banner" data-aos="fade-right" data-aos-duration="1100">
+            <img src="img/devil-vegans/devil-vegans-banner.png" alt="devil-vegans-banner">
+        </div>
+      </div>
+
+      <!-- overview -->
+      <div class="overview">
+
+        <!-- 라인 -->
+        <div class="line-overview"></div>
+
+        <h1>DEVIL VEGANS</h1>
+
+        <div class="list-overview" data-aos="fade-up" data-aos-duration="1100">
+          BRAND STORY <br>
+          LOGO KEYWORD <br>
+          LOGO MARK & FAVICON <br>
+          COLOR & FONT <br>
+        </div>
+
+      </div>
+
+      <!-- 사진 1 -->
+      <div class="container">
+        <div class="devil-vegans-1">
+          <img src="img/devil-vegans/devil-vegans-1.png" alt="devil-vegans-1">
+        </div>
+      </div>
+
+      <!-- section 1 -->
+      <section class="section-1 container">
+        <div class="row text-center">
+
+          <!-- brand story -->
+          <div class="col-md-12 brand-story" data-aos="fade-up" data-aos-duration="1100">
+            <h5>BRAND STORY</h5>
+
+            <p >동물을 사랑하고 환경보호에 관심이 많은 힙한 요즘 세대들을 위해 데빌 비건즈가 직접 나섰습니다.<br>
+            채식을 시작 하고 싶지만 야채는 싱겁고 콩고기는 맛 없다는 편견, 영양실조에 걸린다는 소문 등.<br>
+            채식에 대한 안 좋은 편견을 부수기 위해 데빌 비건즈가 직접 나서서 국내 외<br>
+            맛있다고 소문난 비건 브랜드의 식물성 음식을 공수해 선보입니다.</p>
+          </div>
+
+          <!-- logo keyword -->
+          <div class="col-md-12 logo-keyword">
+
+            <h5>LOGO KEYWORD</h5>
+
+            <div class="row">
+
+              <!-- logo-keyword-1 -->
+              <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
+                <img src="img/devil-vegans/logo-keyword-1.png" alt="logo-keyword-1"
+                class="d-block">
+                <span style="font-weight: 600;">사악하다 (악마)</span>
+                <p>‘사악하게 맛있는'이라는 
+                  브랜드의 슬로건을 표현하기 위해 
+                  날카로운 송곳니를 가진 악마를 표현했습니다.</p>
+              </div>
+
+              <!-- logo-keyword-2 -->
+              <div class="col-md-4" data-aos="fade-up" data-aos-duration="1100"
+              data-aos-delay="200">
+                <img src="img/devil-vegans/logo-keyword-2.png" alt="logo-keyword-2"
+                class="d-block">
+                <span style="font-weight: 600;">채식주의자들</span>
+                <p>브랜드의 주 고객층인
+                  ‘채식주의자’들을 나타냅니다.</p>
+              </div>
+
+              <!-- logo-keyword-3 -->
+              <div class="col-md-4" data-aos="fade-up" data-aos-duration="1100"
+              data-aos-delay="300">
+                <img src="img/devil-vegans/logo-keyword-3.png" alt="logo-keyword-3"
+                class="d-block">
+                <span style="font-weight: 600;">맛있다</span>
+                <p>맛있는 음식을 먹을때
+                  만족스러워하는 모습을
+                  나타냅니다.</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- logo mark -->
+          <div class="col-md-12 logo-mark">
+
+            <h5>LOGO MARK & FAVICON</h5>
+            <img src="img/devil-vegans/logo-mark.png" alt="logo-mark"
+            data-aos="fade-up" data-aos-duration="1100">
+
+          </div>
+
+          <!-- color -->
+          <div class="col-md-12 color">
+
+            <h5>COLOR</h5>
+            <img src="img/devil-vegans/color.png" alt="color"
+            data-aos="fade-up" data-aos-duration="1100">
+
+          </div>
+
+          <!-- font-->
+          <div class="col-md-12 font-devil-vegans">
+
+            <h5>FONT</h5>
+            
+            <div class="row justify-content-center">
+              
+              <!-- font-1 -->
+              <div class="col-md-4" data-aos="fade-up" data-aos-duration="1100"
+              data-aos-delay="200">
+                <img src="img/devil-vegans/font-1.png" alt="font-1">
+              </div>
+
+              <!-- font-2 -->
+              <div class="col-md-4" data-aos="fade-up" data-aos-duration="1100"
+              data-aos-delay="300">
+                <img src="img/devil-vegans/font-2.png" alt="font-2">
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- mock-up borad -->
+          <div class="col-md-12">
+
+            <h5>MOCK-UP BOARD</h5>
+            
+            <div class="row mock-up-board">
+
+              <div class="col-md-12">
+                <img src="img/devil-vegans/mock-up-1.png" alt="mock-up-1">
+              </div>
+
+              <div class="col-md-6">
+                <img src="img/devil-vegans/mock-up-2.png" alt="mock-up-2">
+              </div>
+
+              <div class="col-md-6">
+                <img src="img/devil-vegans/mock-up-3.png" alt="mock-up-3">
+              </div>
+
+              <div class="col-md-12">
+                <img src="img/devil-vegans/mock-up-4.png" alt="mock-up-4">
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- more_projects -->
+      <div class="more_projects text-center">
+        <h3>더 많은 프로젝트들 -</h3>
+
+        <div>
+          <canvas id="myCanvas" width="50" height="150"></canvas>
+        </div>
+
+        <div class="row">
+
+          <!-- next-left  -->
+          <div class="col-md-6" id="next-left"
+          data-aos="fade-right" data-aos-duration="1000">
+
+            <div>
+              <a href="banksalad.html" target="_top">
+               <!--  <img src="img/lemonade/next-banksalad.png" alt="next-banksalad"> -->
+  
+                <!-- 앱솔루트 -->
+                <div class="text_next-left">
+                  <h2>Bank Salad</h2>
+                  <div class="linePortfolio"></div>
+                  <div class="buttonPortfolio">
+                    Web Design
+                  </div>
+                  <div class="buttonPortfolio">
+                    Redesign
+                  </div>
+                </div>
+              </a>
+              </div>
+            
+          </div>
+
+          <!-- next-right  -->
+          <div class="col-md-6" id="next-right"
+          data-aos="fade-left" data-aos-duration="1000"
+          data-aos-delay="200">
+
+            <div>
+              <a href="lemonade.html" target="_top">
+              <!--   <img src="img/banksalad/next-lemonade.png" alt="next-lemonade"> -->
+  
+                <!-- 앱솔루트 -->
+                <div class="text_next-right">
+                  <h2>Lemonade</h2>
+                  <div class="linePortfolio"></div>
+                  <div class="buttonPortfolio">
+                    App Design
+                  </div>
+                </div>
+              </a>
+              </div>
+            
+          </div>
+        </div>
+
+      </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+      © 2022 Seul Bi Lee Web Design Projects
+    </footer>
+
+    <!-- Canvas - Javascript -->
+    <script> 
+
+          // 1. canvas 엘리먼트를 취득한다. 
+          const canvas = document.getElementById('myCanvas'); 
+          // 2. 2d모드의 그리기 객체를 취득한다. => 이 객체를 통해 canvas에 그림을 그릴 수 있다. 
+          const ctx = canvas.getContext("2d");
+          ctx.fill();
+          // 3. 새선 그리기 설정 
+          ctx.beginPath(); 
+          // 4. 출발점 지정 
+          ctx.moveTo(25, 0); 
+          // 5. 도착점 지정 
+          ctx.lineTo(25, 120);
+          // 6. 선 두께 및 색상
+          ctx.lineWidth = 1; 
+          ctx.strokeStyle = "#00000";
+          // 7. 선 그리기 
+          ctx.stroke();
+    
+          // 원 그리기 시작
+          ctx.beginPath();
+          // 원 (x시작좌표값, y시작좌표값, 반지름크기, 원모양, 시계방향여부)
+          ctx.arc(25, 120, 6, Math.PI*2, false);
+          ctx.fillstyle = "#00000";
+          ctx.fill();
+          ctx.closePath();
+    
+    </script>
+
+    <!-- 스크립트 구역 -->
+    <!-- 아래 정렬순서가 왜 이렇게 되는지 공부할 것 -->
+    <!-- 이 속에 제이쿼리 엔진 다 들어 있어서 이 스크립트만 있어도 됨 -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+
+        disable: 'mobile'
+        
+      });
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   
+    <!-- 순서 지키는 게 중요 (구동시키는 제이쿼리 파일이 먼저 와야함)********** -->
+    <!-- 최근 scrolling을 선호하지 않아 제이쿼리 상위버전에서는 지원을 없앴기 때문에 따로 개별적으로 하위 버전을
+    깔아주고 그 밑에 scrolling파일을 불러와야 함 -->
+    <script src="js/jquery-2.0.2.min.js"></script>     
+    <script src="js/scrolling-bt.js"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+
+    <!-- 모바일에서 메뉴클릭시 메뉴화면 닫히는 스크립트 -->
+    <script>
+      $('.nav-link, logo').click(function(){
+     
+        $('.navbar-collapse').collapse('hide');
+        
+     
+      });
+     </script>   
+
+    <!-- top 버튼 -->
+    <script>
+
+      // 스크롤바 위치 2000일때 topBtn 버튼 나타나고 아닐때 숨기기
+
+      $(function() {
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 1000) {
+            $('#topBtn').fadeIn();
+          }
+          else {
+            $('#topBtn').fadeOut();
+          }
+        });
+      }); 
+
+      // topBtn 버튼 누르면 맨 위로 이동시켜라
+
+      $(function() {
+        $('#topBtn').click(function() {
+          $('html, body').animate({'scrollTop' : 0}, 1000);
+          return false;
+        });
+      }); 
+
+      //위 애니메이션 ( ) 속의 scrollTop 속성은 자바스크립트의 DOM에 정의된 속성임
+        
+
+    </script>
+
+  </body>
+</html>
